@@ -13,7 +13,7 @@ class MockCacheStorageService {
 
   public ready() {
     return true;
-}
+  }
 }
 
 describe('IndicatorResourceService Unit Tests', () => {

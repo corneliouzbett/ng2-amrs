@@ -99,6 +99,14 @@ export class FakePersonResourceService {
   }
 }
 
+class FakeCacheStorageService {
+  constructor(a, b) {
+  }
+  public ready() {
+    return true;
+  }
+}
+
 xdescribe('Component: FormentryComponent', () => {
   const router = {
     navigate: jasmine.createSpy('navigate')
@@ -168,14 +176,6 @@ xdescribe('Component: FormentryComponent', () => {
     }
 
   } as Form;
-
-  class FakeCacheStorageService {
-    constructor(a, b) {
-    }
-    public ready() {
-      return true;
-    }
-  }
 
   beforeEach(() => {
     TestBed.configureTestingModule({

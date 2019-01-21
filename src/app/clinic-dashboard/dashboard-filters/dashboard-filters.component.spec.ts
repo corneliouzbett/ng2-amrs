@@ -222,8 +222,6 @@ export class FakeClinicalSummaryVisualizationResourceService {
     fixture.detectChanges();
     parentComponent.filterModelChange.subscribe((vv) => {
       setTimeout(() => {
-        expect(parentComponent.filterModel.ageFrom).toBeDefined();
-        expect(parentComponent.filterModel.ageTo).toBeDefined();
         expect(parentComponent.filterModel.ageFrom).toEqual(11);
         expect(parentComponent.filterModel.ageTo).toEqual(13);
       }, 100);

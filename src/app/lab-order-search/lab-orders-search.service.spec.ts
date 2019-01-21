@@ -35,16 +35,6 @@ describe('Service: LabOrdersSearchService', () => {
         expect(service).toBeTruthy();
     });
 
-    it('should get lab order by uuid', (done) => {
-        const service: LabOrdersSearchService = TestBed.get(LabOrdersSearchService);
-        const result = service.searchLabOrder('ORD-4312', false);
-
-        result.subscribe((order) => {
-            expect(order).toBeTruthy();
-            expect(order.uuid).toEqual('2f949c58-0396-4eff-a398-bad3d5a9610e');
-        });
-        done();
-    });
 
     it('should return an error when lab order cannot be loaded', (done) => {
         const service: LabOrdersSearchService = TestBed.get(LabOrdersSearchService);

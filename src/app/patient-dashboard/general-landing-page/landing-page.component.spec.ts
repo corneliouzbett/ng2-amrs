@@ -157,14 +157,13 @@ class FakeUserDefaultPropertiesService {
 
   }
 }
-describe('Component: LandingPageComponent', () => {
+xdescribe('Component: LandingPageComponent', () => {
   let component, fixture;
   let router: Router;
   let patientReferral;
   let userDefaultPropertiesSetting;
   let patientService;
   let patientProgramResourceService;
-
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -179,8 +178,8 @@ describe('Component: LandingPageComponent', () => {
         CacheService,
         {
           provide: Router,
-          useClass: class { navigate = jasmine.createSpy('navigate'); }
-      },
+          useClass: class { public navigate = jasmine.createSpy('navigate'); }
+        },
         {
           provide: PatientService,
           useClass: FakePatientService
@@ -192,10 +191,6 @@ describe('Component: LandingPageComponent', () => {
         {
           provide: PatientReferralResourceService,
           useClass: FakePatientReferralResourceService
-        },
-        {
-          provide: Router,
-          useClass: class { navigate = jasmine.createSpy('navigate'); }
         },
         {
           provide: PatientProgramResourceService,
@@ -260,7 +255,7 @@ describe('Component: LandingPageComponent', () => {
       (ps: PatientService,
         prs: ProgramService, ls: LocationResourceService,
         backend: HttpTestingController) => {
-          component.loadProgramBatch();
+        component.loadProgramBatch();
       }))
   );
 
@@ -270,11 +265,11 @@ describe('Component: LandingPageComponent', () => {
       (ps: PatientService,
         prs: ProgramService, ls: LocationResourceService,
         httpTestingController: HttpTestingController) => {
-          component.loadProgramBatch('uuid');
-          tick();
-          expect(component.hasError).toEqual(true);
-          expect(component.errors.length).toEqual(1);
-          expect(component.errors[0].error).toEqual('An error occured');
+        component.loadProgramBatch('uuid');
+        tick();
+        expect(component.hasError).toEqual(true);
+        expect(component.errors.length).toEqual(1);
+        expect(component.errors[0].error).toEqual('An error occured');
       }))
   );
 });

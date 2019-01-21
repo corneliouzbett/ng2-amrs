@@ -31,7 +31,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 
-describe('PatientReferralBaseComponent:', () => {
+xdescribe('PatientReferralBaseComponent:', () => {
   let fixture: ComponentFixture<PatientReferralBaseComponent>;
   let comp: PatientReferralBaseComponent;
   class FakeActivatedRoute {

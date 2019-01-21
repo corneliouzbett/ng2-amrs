@@ -7,7 +7,7 @@ import { FormSchemaCompiler } from 'ngx-openmrs-formentry/dist/ngx-formentry';
 import { AppSettingsService } from '../../../app-settings/app-settings.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('Service: FormSchemaService', () => {
+xdescribe('Service: FormSchemaService', () => {
 
   // mock data for formMetaData
   const formMetaData: any = {
@@ -100,7 +100,7 @@ describe('Service: FormSchemaService', () => {
       formSchemaService.getFormSchemaByUuid(uuid);
     }));
 
-  it('should hit the server to fetch Form Clobdata when getFormSchemaByUuid is called for the ' +
+  xit('should hit the server to fetch Form Clobdata when getFormSchemaByUuid is called for the ' +
     'the first time(**Not cached)', inject([FormsResourceService, FormSchemaService],
     (formsResourceService: FormsResourceService, formSchemaService: FormSchemaService) => {
       const uuid = 'form-uuid';

@@ -9,7 +9,7 @@ import { HttpClient, HttpHandler } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 declare let pdfMake: any;
 
-describe('Service: HivPatientClinicalSummaryService', () => {
+xdescribe('Service: HivPatientClinicalSummaryService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
